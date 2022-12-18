@@ -27,6 +27,17 @@ class Usuario extends CI_Model {
 
     }
 
+    public function actualizar($id, $data){
+        $datos = array(
+            'nombre' => $data['nombre'],
+            'nombre' => $data['nombre'],
+        );
+
+        $this->db->where('id', $id);
+        $query = $this->db->update('usuarios', $datos);
+
+    }
+
     
 
 
